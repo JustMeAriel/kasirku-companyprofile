@@ -1,0 +1,142 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+p.hero {
+    color: #ffffff;
+    line-height: 1.7;
+}
+
+p.body {
+    color: #000000;
+    line-height: 1.7;
+}
+
+/* Navbar default (awal) */
+.navbar {
+    background: #ffffff;
+    transition: all 0.3s ease;
+}
+
+/* Warna teks saat awal */
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: #262dff !important;
+}
+
+/* Navbar setelah scroll */
+.navbar.scrolled {
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+
+/* Hero */
+.hero {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(13,110,253,0.85), rgba(5, 74, 176, 0.85)),
+        url("../img/hero-bg.jpg") center/cover no-repeat;
+        animation: fadeIn 3s ease forwards;
+
+}
+
+.about-section {
+    padding-top: 100px;
+    padding-bottom: 60px;    
+}
+
+
+/* CTA */
+.cta-section {
+    background: linear-gradient(135deg, #0d6efd, #084298);
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+.fade-in-delay {
+    animation: fadeIn 1.5s ease forwards;
+}
+
+.fade-in-img {
+    animation: fadeIn 2s ease forwards;
+}
+
+
+.slide-up {
+    animation: slideUp 1s ease forwards;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Hover effect */
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.service-icon {
+    font-size: 40px;
+    color: #0d6efd;
+}
+
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.15rem rgba(13,110,253,.25);
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
